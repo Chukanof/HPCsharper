@@ -1,21 +1,26 @@
 # Higher Performance Computing in C# (HPCsharper)
 
-High performance C#/.NET generic algorithms. Takes HPCsharp free library to the next level of performance.
-Parallel implemention of variety of algorithms:
+High performance C#/.NET generic algorithms. Builds on top of the HPCsharp NuGet package, and takes it to the next level of performance.
+Parallel implementation of algorithms:
 - Parallel Merge Sort (Stable): Array, List
 - Parallel Merge (Stable): Array, List
-- Parallel Copy: Array to Array, List to Array, List to List
+- Parallel Copy: Array to Array, List to Array
+- Binary Search: Array, List
 
-*Method*|*Collection*|*Parallel vs Array.Sort*|*Parallel vs List.Sort*|*Parallel vs Linq*|*Number of Cores*
+*Method*|*Collection*|*vs Array.Sort*|*vs List.Sort*|*vs Linq*|*Number of Cores*
 --- | --- | --- | --- | --- | ---
-Sort|Array|2X-3X faster|||4 cores
-Sort|List||2X-3X faster||4 cores
-Sort|Array|3.5X-5X faster|||6 cores
-Sort|List||2.5X-4.5X faster||6 cores
+Parallel Merge Sort|Array|2X-3X faster|||4 cores
+Parallel Merge Sort|List||2X-3X faster||4 cores
+Parallel Merge Sort|Array|3.5X-5X faster|||6 cores
+Parallel Merge Sort|List||2.5X-4.5X faster||6 cores
+Parallel Merge|Array||??X faster||4 cores
+Parallel Merge|List||??X faster||4 cores
 
 *Method*|*Collection*|*Parallel*
 --- | --- | ---
-CopyTo|List to Array|2-2.5X faster
+Parallel Copy|Array to Array|??X faster
+Parallel CopyTo|List to Array|2-2.5X faster
+Parallel ToArray|List to Array|??X faster
 
 - More to come...
 
