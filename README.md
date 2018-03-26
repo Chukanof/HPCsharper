@@ -43,9 +43,9 @@ https://duvanenko.tech.blog/2018/03/03/high-performance-c/
 	bool equalSortedArrays = arrayOne.SequenceEqual(arrayTwo);
 
 	if (equalSortedArrays)
-		Console.WriteLine("Sorting results are equal");
+		Console.WriteLine("Sorted results are equal");
 	else
-		Console.WriteLine("Sorting results are not equal!");
+		Console.WriteLine("Sorted results are not equal!");
 
 
 

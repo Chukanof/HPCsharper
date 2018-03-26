@@ -10,7 +10,7 @@ namespace HPCsharperExamples
     {
         static void Main(string[] args)
         {
-            // Test Radix Sort
+            // Test Parallel Merge Sort
             uint[] arrayOne = { 21, 43, 16, 5, 54, 3 };
             uint[] arrayTwo = { 21, 43, 16, 5, 54, 3 };
 
@@ -20,9 +20,9 @@ namespace HPCsharperExamples
             bool equalSortedArrays = arrayOne.SequenceEqual(arrayTwo);
 
             if (equalSortedArrays)
-                Console.WriteLine("Sorting results are equal");
+                Console.WriteLine("Sorted results are equal");
             else
-                Console.WriteLine("Sorting results are not equal!");
+                Console.WriteLine("Sorted results are not equal!");
 
             // Measure Parallel Merge Sort of Array speedup
             SortMeasureArraySpeedup();
