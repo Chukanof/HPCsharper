@@ -32,6 +32,21 @@ https://foostate.com/
 For details on the motivation see blog:
 https://duvanenko.tech.blog/2018/03/03/high-performance-c/
 
+# Examples
+
+	uint[] arrayOne = { 21, 43, 16, 5, 54, 3 };
+	uint[] arrayTwo = { 21, 43, 16, 5, 54, 3 };
+
+	arrayOne.SortMergePar();
+	Array.Sort(arrayTwo);
+
+	bool equalSortedArrays = arrayOne.SequenceEqual(arrayTwo);
+
+	if (equalSortedArrays)
+		Console.WriteLine("Sorting results are equal");
+	else
+		Console.WriteLine("Sorting results are not equal!");
+
 
 
 
