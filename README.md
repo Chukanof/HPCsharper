@@ -16,11 +16,11 @@ Parallel Merge Sort|List||2.5X-4.5X faster||6 cores
 Parallel Merge|Array||??X faster||4 cores
 Parallel Merge|List||??X faster||4 cores
 
-*Method*|*Collection*|*Parallel*
---- | --- | ---
-Parallel Copy|Array to Array|??X faster
-Parallel CopyTo|List to Array|2-2.5X faster
-Parallel ToArray|List to Array|??X faster
+*Method*|*Collection*|*Parallel*|*Performance*
+--- | --- | --- | ---
+Parallel Copy|Array to Array|1.7-2.7X faster|1.3 GigaIntegers/sec
+Parallel CopyTo|List to Array|1.7-2.5X faster|1.3 GigaIntegers/sec
+Parallel ToArray|List to Array|??X faster|
 
 - More to come...
 

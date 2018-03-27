@@ -41,9 +41,9 @@ namespace HPCsharperExamples
 
             bool equalSortedArrays = benchArrayOne.SequenceEqual(benchArrayTwo);
             if (equalSortedArrays)
-                Console.WriteLine("Sorting results are equal");
+                Console.WriteLine("Sorted results are equal");
             else
-                Console.WriteLine("Sorting results did not compare!");
+                Console.WriteLine("Sorted results did not compare!");
 
             Console.WriteLine("C# array of size {0}: Array.Sort {1:0.000} sec, SortMergeParallel {2:0.000} sec, speedup {3:0.00}", arraySize,
                                timeArraySort, timeHpcSort, timeArraySort / timeHpcSort);
@@ -78,9 +78,9 @@ namespace HPCsharperExamples
 
             bool equalSortedArrays = benchListOne.SequenceEqual(benchListTwo);
             if (equalSortedArrays)
-                Console.WriteLine("Sorting results are equal");
+                Console.WriteLine("Sorted results are equal");
             else
-                Console.WriteLine("Sorting results did not compare!");
+                Console.WriteLine("Sorted results did not compare!");
 
             Console.WriteLine("C# List of size {0}: List.Sort {1:0.000} sec, SortMergeParallel {2:0.000} sec, speedup {3:0.00}", ListSize,
                                timeListSort, timeRadixSort, timeListSort / timeRadixSort);

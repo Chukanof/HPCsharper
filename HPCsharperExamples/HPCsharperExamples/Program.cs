@@ -10,9 +10,9 @@ namespace HPCsharperExamples
     {
         static void Main(string[] args)
         {
-            // Test Parallel Merge Sort
-            uint[] arrayOne = { 21, 43, 16, 5, 54, 3 };
-            uint[] arrayTwo = { 21, 43, 16, 5, 54, 3 };
+            // Parallel Merge Sort of Array example
+            int[] arrayOne = { 21, 43, 16, 5, 54, 3 };
+            int[] arrayTwo = { 21, 43, 16, 5, 54, 3 };
 
             arrayOne.SortMergePar();
             Array.Sort(arrayTwo);
@@ -20,9 +20,24 @@ namespace HPCsharperExamples
             bool equalSortedArrays = arrayOne.SequenceEqual(arrayTwo);
 
             if (equalSortedArrays)
-                Console.WriteLine("Sorted results are equal");
+                Console.WriteLine("Sorted array results are equal");
             else
-                Console.WriteLine("Sorted results are not equal!");
+                Console.WriteLine("Sorted array results are not equal!");
+
+            // Parallel Merge Sort of List example
+            var listOne = new List<int>() { 15, 11, 34, 4, 25, 67 };
+            var listTwo = new List<int>() { 15, 11, 34, 4, 25, 67 };
+
+            ParallelAlgorithm.SortMergePar(ref listOne);
+            //listOne = listOne.SortMergePar();             // another valid usage
+            listTwo.Sort();
+
+            bool equalSortedLists = listOne.SequenceEqual(listTwo);
+
+            if (equalSortedLists)
+                Console.WriteLine("Sorted List results are equal");
+            else
+                Console.WriteLine("Sorted List results are not equal!");
 
             // Measure Parallel Merge Sort of Array speedup
             SortMeasureArraySpeedup();
