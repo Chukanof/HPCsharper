@@ -7,20 +7,20 @@ Parallel implementation of algorithms:
 - Parallel Copy: Array to Array, List to Array
 - Binary Search: Array, List
 
-*Method*|*Collection*|*vs Array.Sort*|*vs List.Sort*|*vs Linq*|*Number of Cores*
---- | --- | --- | --- | --- | ---
-Parallel Merge Sort|Array|2X-3X faster|||4 cores
-Parallel Merge Sort|List||2X-3X faster||4 cores
-Parallel Merge Sort|Array|3.5X-5X faster|||6 cores
-Parallel Merge Sort|List||2.5X-4.5X faster||6 cores
-Parallel Merge|Array||??X faster||4 cores
-Parallel Merge|List||??X faster||4 cores
+*Method*|*Collection*|*vs Array.Sort*|*vs List.Sort*|*vs Linq*|*CPU Cores*|*Break Even*
+--- | --- | --- | --- | --- | --- | ---
+Parallel Merge Sort|Array|2X-3X faster|||4|64K
+Parallel Merge Sort|List||2X-3X faster||4|
+Parallel Merge Sort|Array|3.5X-5X faster|||6|
+Parallel Merge Sort|List||2.5X-4.5X faster||6|
+Parallel Merge|Array||??X faster||4|
+Parallel Merge|List||??X faster||4|
 
-*Method*|*Collection*|*Parallel*|*Performance*
---- | --- | --- | ---
-Parallel Copy|Array to Array|1.7-2.7X faster|1.3 GigaIntegers/sec
-Parallel CopyTo|List to Array|1.7-2.5X faster|1.3 GigaIntegers/sec
-Parallel ToArray|List to Array|??X faster|
+*Method*|*Collection*|*Parallel*|*Performance*|*Break Even*
+--- | --- | --- | --- | ---
+Parallel Copy|Array to Array|1.7-2.7X faster|1.3 GigaInts/sec|
+Parallel CopyTo|List to Array|1.7-2.5X faster|1.3 GigaInts/sec|
+Parallel ToArray|List to Array|??X faster||
 
 - More to come...
 
@@ -34,15 +34,13 @@ https://duvanenko.tech.blog/2018/03/03/high-performance-c/
 
 # Examples
 
-	uint[] arrayOne = { 21, 43, 16, 5, 54, 3 };
-	uint[] arrayTwo = { 21, 43, 16, 5, 54, 3 };
+	int[] arrayOne = { 21, 43, 16, 5, 54, 3 };
+	int[] arrayTwo = { 21, 43, 16, 5, 54, 3 };
 
 	arrayOne.SortMergePar();
 	Array.Sort(arrayTwo);
 
-	bool equalSortedArrays = arrayOne.SequenceEqual(arrayTwo);
-
-	if (equalSortedArrays)
+	if (arrayOne.SequenceEqual(arrayTwo))
 		Console.WriteLine("Sorted results are equal");
 	else
 		Console.WriteLine("Sorted results are not equal!");

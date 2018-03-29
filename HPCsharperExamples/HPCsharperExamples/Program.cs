@@ -17,9 +17,7 @@ namespace HPCsharperExamples
             arrayOne.SortMergePar();
             Array.Sort(arrayTwo);
 
-            bool equalSortedArrays = arrayOne.SequenceEqual(arrayTwo);
-
-            if (equalSortedArrays)
+            if (arrayOne.SequenceEqual(arrayTwo))
                 Console.WriteLine("Sorted array results are equal");
             else
                 Console.WriteLine("Sorted array results are not equal!");
@@ -32,9 +30,7 @@ namespace HPCsharperExamples
             //listOne = listOne.SortMergePar();             // another valid usage
             listTwo.Sort();
 
-            bool equalSortedLists = listOne.SequenceEqual(listTwo);
-
-            if (equalSortedLists)
+            if (listOne.SequenceEqual(listTwo))
                 Console.WriteLine("Sorted List results are equal");
             else
                 Console.WriteLine("Sorted List results are not equal!");
