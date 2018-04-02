@@ -13,13 +13,13 @@ Parallel Merge Sort|Array|2X-3X faster|||4|64K
 Parallel Merge Sort|List||2X-3X faster||4|
 Parallel Merge Sort|Array|3.5X-5X faster|||6|
 Parallel Merge Sort|List||2.5X-4.5X faster||6|
-Parallel Merge|Array||??X faster||4|
-Parallel Merge|List||??X faster||4|
+Parallel Merge|Array||2.5X-4.5X faster||4|
+Parallel Merge|List||1.5X-2.4X faster||4|
 
 *Method*|*Collection*|*Parallel*|*Performance*|*Break Even*
 --- | --- | --- | --- | ---
-Parallel Copy|Array to Array|1.7-2.7X faster|1.3 GigaInts/sec|
-Parallel CopyTo|List to Array|1.7-2.5X faster|1.3 GigaInts/sec|
+Parallel Copy|Array to Array|1.7X-2.7X faster|1.3 GigaInts/sec|
+Parallel CopyTo|List to Array|1.7X-2.5X faster|1.3 GigaInts/sec|
 Parallel ToArray|List to Array|??X faster||
 
 - More to come...
