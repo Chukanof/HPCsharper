@@ -7,14 +7,16 @@ Parallel implementation of algorithms:
 - Parallel Copy: Array to Array, List to Array
 - Binary Search: Array, List
 
-*Method*|*Collection*|*vs Array.Sort*|*vs List.Sort*|*vs Linq*|*CPU Cores*|*Break Even*
---- | --- | --- | --- | --- | --- | ---
-Parallel Merge Sort|Array|2X-3X faster|||4|64K
-Parallel Merge Sort|List||2X-3X faster||4|
-Parallel Merge Sort|Array|3.5X-5X faster|||6|
-Parallel Merge Sort|List||2.5X-4.5X faster||6|
-Parallel Merge|Array||2.5X-4.5X faster||4|
-Parallel Merge|List||1.5X-2.4X faster||4|
+*Method*|*Collection*|*vs Array.Sort*|*vs List.Sort*|*vs Linq*|*CPU Cores*|*Break Even*|*Description*
+--- | --- | --- | --- | --- | --- | --- | ---
+Parallel Merge Sort|Array|2X-3X faster|||4|64K| Stable
+Parallel Merge Sort|List||2X-3X faster||4|Stable
+Parallel Merge Sort|Array|3.5X-5X faster|||6|Stable
+Parallel Merge Sort|List||2.5X-4.5X faster||6|Stable
+Parallel Merge|Array||2.5X-4.5X faster||4|Stable
+Parallel Merge|List||1.5X-2.4X faster||4|Stable
+
+Copying from an Array or List to a newly created Array
 
 *Method*|*Collection*|*Parallel*|*Performance*|*Break Even*
 --- | --- | --- | --- | ---
