@@ -4,17 +4,25 @@ High performance C#/.NET generic algorithms. Builds on top of the HPCsharp NuGet
 Parallel implementation of algorithms:
 - Parallel Merge Sort (Stable): Array, List
 - Parallel Merge (Stable): Array, List
+- Radix Sort (Stable) : Array, List
 - Parallel Copy: Array to Array, List to Array
 - Binary Search: Array, List
 
 *Method*|*Collection*|*vs Array.Sort*|*vs List.Sort*|*vs Linq*|*CPU Cores*|*Break Even*|*Description*
 --- | --- | --- | --- | --- | --- | --- | ---
-Parallel Merge Sort|Array|2X-3X faster|||4|64K| Stable
-Parallel Merge Sort|List||2X-3X faster||4|Stable
-Parallel Merge Sort|Array|3.5X-5X faster|||6|Stable
-Parallel Merge Sort|List||2.5X-4.5X faster||6|Stable
-Parallel Merge|Array||2.5X-4.5X faster||4|Stable
-Parallel Merge|List||1.5X-2.4X faster||4|Stable
+Parallel Merge Sort|Array|2X-3X faster|||4|64K|Stable
+Parallel Merge Sort|List||2X-3X faster||4||Stable
+Parallel Merge Sort|Array|3.5X-5X faster|||6||Stable
+Parallel Merge Sort|List||2.5X-4.5X faster||6||Stable
+Parallel Merge|Array||2.5X-4.5X faster||4||Stable
+Parallel Merge|List||1.5X-2.4X faster||4||Stable
+
+Radix Sort (Stable) versus C# Array.Sort
+
+*Method*|*Collection*|*Random*|*Presorted*|*Constant*|*Data Type*|*Break Even*|*Description*
+--- | --- | --- | --- | --- | --- | --- | ---
+Radix Sort|Array|4.3X-7.2X faster|||uint|64K| Stable
+Radix Sort|Array|3.1X-4.4X faster|||User Class|64K| Stable
 
 Copying from an Array or List to a newly created Array
 
